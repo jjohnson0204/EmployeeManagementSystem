@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.employeemanagementsystem.EmployeeBoardController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="35.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="35.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@employeeboardDesign.css">
+                                    <children>
+                                        <FontAwesomeIcon glyphName="USER" layoutX="32.0" layoutY="27.0" size="1.5em" />
+                                        <Label layoutX="53.0" layoutY="9.0" text="Employee Portal">
+                                            <font>
+                                                <Font name="Tahoma" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="close" layoutX="1034.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="60.0" styleClass="close" stylesheets="@employeeboardDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="minimize" layoutX="969.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="60.0" styleClass="minimize" stylesheets="@employeeboardDesign.css">
+                                            <graphic>
+                                                <FontAwesomeIcon glyphName="MINUS" size="1.2em" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children></AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="555.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="564.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@employeeboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="73.0" layoutY="108.0" selectionEnd="0" size="7em" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                        <Label layoutX="73.0" layoutY="132.0" text="Welcome," textFill="WHITE">
+                                            <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="username" alignment="CENTER" layoutX="16.0" layoutY="162.0" prefHeight="23.0" prefWidth="177.0" text="Employee" textFill="#27805c">
+                                            <font>
+                                                <Font name="Arial Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="87.0" layoutX="116.0" layoutY="197.0" startX="-100.0" stroke="WHITE" />
+                                        <Button fx:id="home_btn" layoutX="20.0" layoutY="231.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@employeeboardDesign.css" text="Home">
+                                            <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="1.5em" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-btn" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="clockin_btn" layoutX="20.0" layoutY="265.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@employeeboardDesign.css" text="Clock In">
+                                            <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="CHECK" size="1.5em" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-btn" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="clockout_btn" layoutX="20.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@employeeboardDesign.css" text="Clock Out">
+                                            <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="1.5em" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-btn" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="schedule_btn" layoutX="20.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@employeeboardDesign.css" text="Schedule">
+                                            <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="CALENDAR" size="1.5em" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nav-btn" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="employee_profile_btn" layoutX="20.0" layoutY="370.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@employeeboardDesign.css" text="Employee Profile">
+                                            <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="DATABASE" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="logout" layoutX="20.0" layoutY="526.0" mnemonicParsing="false" onAction="#logout" stylesheets="@dashboardDesign.css" textFill="WHITE">
+                                            <graphic>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                            </graphic>
+                                            <styleClass>
+                                                <String fx:value="logout" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                        </Button>
+                                        <Label layoutX="73.0" layoutY="534.0" text="Logout" textFill="WHITE">
+                                            <font>
+                                                <Font name="Tahoma" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                        <children>
+                        <AnchorPane fx:id="home_form" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="866.0" stylesheets="@employeeboardDesign.css">
+                           <styleClass>
+                              <String fx:value="white_bg" />
+                              <String fx:value="shadow" />
+                           </styleClass></AnchorPane>
+                        <AnchorPane fx:id="clockin_form" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="866.0" stylesheets="@employeeboardDesign.css" visible="false">
+                           <styleClass>
+                              <String fx:value="white_bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <Label fx:id="statusLabel1" layoutX="306.0" layoutY="400.0" prefHeight="25.0" prefWidth="250.0" textFill="#155130">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                              <TextField fx:id="employeeIdField1" alignment="CENTER" layoutX="331.0" layoutY="130.0" onAction="#displayEmployeeId" promptText="Enter your employee ID" />
+                              <Button fx:id="clockInButton" layoutX="380.0" layoutY="230.0" mnemonicParsing="false" onAction="#clockIn" text="Clock In" />
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="clockout_form" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="866.0" stylesheets="@employeeboardDesign.css" visible="false">
+                           <styleClass>
+                              <String fx:value="white_bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <TextField fx:id="employeeIdField" alignment="CENTER" layoutX="331.0" layoutY="130.0" onAction="#displayEmployeeId" promptText="Enter your employee ID" />
+                              <Button fx:id="cloockOutButton" layoutX="380.0" layoutY="230.0" mnemonicParsing="false" onAction="#clockOut" text="Clock Out" />
+                              <Label fx:id="statusLabel" layoutX="306.0" layoutY="400.0" prefHeight="25.0" prefWidth="250.0" />
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="schedule_form" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="866.0" stylesheets="@employeeboardDesign.css">
+                           <styleClass>
+                              <String fx:value="white_bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                               <FlowPane fx:id="calendar" hgap="10.0" layoutX="50.0" layoutY="97.0" prefHeight="433.0" prefWidth="765.0" stylesheets="@employeeboardDesign.css" vgap="5.0">
+                                 <styleClass>
+                                    <String fx:value="white_bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass></FlowPane>
+                               <HBox alignment="CENTER" layoutX="224.0" layoutY="14.0" prefHeight="44.0" prefWidth="419.0" spacing="5.0">
+                                   <children>
+                                       <Button mnemonicParsing="false" onAction="#backOneMonth" text="&lt;" />
+                                       <Text fx:id="year" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                                           <font>
+                                               <Font size="22.0" />
+                                           </font>
+                                       </Text>
+                                       <Text fx:id="month" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                                           <font>
+                                               <Font size="22.0" />
+                                           </font>
+                                       </Text>
+                                       <Button mnemonicParsing="false" onAction="#forwardOneMonth" text="&gt;" />
+                                   </children>
+                               </HBox>
+                               <HBox alignment="CENTER" layoutX="75.0" layoutY="58.0" prefHeight="44.0" prefWidth="716.0" spacing="88.75">
+                                   <children>
+                                       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Su" textAlignment="CENTER" />
+                                       <Text layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mo" textAlignment="CENTER" />
+                                       <Text layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu" textAlignment="CENTER" />
+                                       <Text layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We" textAlignment="CENTER" />
+                                       <Text layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Th" textAlignment="CENTER" />
+                                       <Text layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fr" textAlignment="CENTER" />
+                                       <Text layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sa" textAlignment="CENTER" />
+                                   </children>
+                                   <padding>
+                                       <Insets right="9.0" />
+                                   </padding>
+                               </HBox>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="employee_profile_form" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="866.0" stylesheets="@employeeboardDesign.css" visible="false">
+                        <children>
+                        <AnchorPane prefHeight="544.0" prefWidth="866.0" stylesheets="@employeeboardDesign.css" />
+                        </children>
+                           <styleClass>
+                              <String fx:value="white_bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </AnchorPane>
+                        </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

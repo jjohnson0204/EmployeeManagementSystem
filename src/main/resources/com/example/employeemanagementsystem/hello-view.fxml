@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.employeemanagementsystem.HelloController">
+   <children>
+      <AnchorPane fx:id="main_form">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="left-form" stylesheets="@loginDesign.css">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="99.0" layoutY="164.0" size="8em" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Label layoutX="9.0" layoutY="211.0" text="Employee Management System" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="right-form" stylesheets="@loginDesign.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="80.0" text="Welcome back Admin!" textFill="#1d6f6d">
+                     <font>
+                        <Font name="Tahoma Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="40.0" layoutY="160.0" onAction="#loginAdmin" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css" />
+                  <PasswordField fx:id="password" layoutX="40.0" layoutY="220.0" onAction="#loginAdmin" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                  <Button fx:id="loginBtn" layoutX="40.0" layoutY="300.0" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Adminisitrator" textFill="WHITE" />
+                  <Button fx:id="close" layoutX="234.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="60.0" styleClass="close" stylesheets="@loginDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" size="1.2em" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="loginBtn1" layoutX="40.0" layoutY="340.0" mnemonicParsing="false" onAction="#loginEmployee" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Employee" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</StackPane>
